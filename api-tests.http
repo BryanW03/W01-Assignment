@@ -1,0 +1,23 @@
+### Run the API first:  cd PizzaApi && dotnet run --urls http://localhost:5100
+### (VS Code: install the "REST Client" extension and click "Send Request")
+
+### GET all pizzas  -> 200 OK
+GET http://localhost:5100/pizza
+
+### POST a new pizza -> 201 Created
+POST http://localhost:5100/pizza
+Content-Type: application/json
+
+{ "name": "Hawaiian", "isGlutenFree": false }
+
+### PUT update pizza 2 -> 204 No Content
+PUT http://localhost:5100/pizza/2
+Content-Type: application/json
+
+{ "id": 2, "name": "Veggie Deluxe", "isGlutenFree": true }
+
+### DELETE pizza 1 -> 204 No Content
+DELETE http://localhost:5100/pizza/1
+
+### GET all again to check the changes
+GET http://localhost:5100/pizza

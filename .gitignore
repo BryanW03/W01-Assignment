@@ -1,0 +1,5 @@
+bin/
+obj/
+salesTotalDir/
+evidence.txt
+.vs/
